@@ -3,13 +3,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define _DEFAULT 0
-#define _GAME 1
-#define _NAVI 2
-#define _SYMBOL 3
-#define _NUMBER 4
-#define _MOUSE 5
-#define _MEDIA 6
-#define _ADJUST 7
+#define _NAVI 1
+#define _SYMBOL 2
+#define _NUMBER 3
+#define _MOUSE 4
+#define _MEDIA 5
+#define _ADJUST 6
 
 #define TAPPING_TERM 150
 #define QUICK_TAP 200
@@ -55,17 +54,7 @@
         &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I        &kp O      &kp P
         &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G   &kp H &hm LSHFT J  &hm LCTRL K  &hm LALT L &hm LGUI SQT
         &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N &kp M        &kp COMMA    &kp DOT    &kp FSLH
-            &lt _MEDIA ESC  &lt _NAVI BSPC  &lt _SYMBOL SPC   &lt _ADJUST RET  &lt _NUMBER DEL  &lt _MOUSE TAB
-      >;
-    };
-
-    game_layer {
-      label = "GAME";
-      bindings = <
-        &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I        &kp O      &kp P
-        &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp G   &kp H &mt LSHFT J  &mt LCTRL K  &mt LALT L &mt LGUI SQT
-        &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N &kp M        &kp COMMA    &kp DOT    &kp FSLH
-                    &kp LGUI   &mo 1       &kp SPACE           &kp RET            &mo 2        &kp RALT
+            &lt _MOUSE ESC  &lt _SYMBOL BSPC  &lt _NAVI SPC   &lt _NUMBER RET  &lt _ADJUST DEL  &lt _MEDIA TAB
       >;
     };
 
@@ -74,7 +63,7 @@
       bindings = <
         &none      &none      &none       &none       &none  &kp K_REDO  &kp LC(V)    &kp LC(C)   &kp LC(X)  &kp LC(Z)
         &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none  &caps_word  &kp LEFT     &kp UP      &kp DOWN   &kp RIGHT  
-        &kp RGUI   &sk RALT   &sk RCTRL   &sk RSHFT   &none  &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp INS
+        &kp RGUI   &sk RALT   &sk RCTRL   &sk RSHFT   &none  &kp PG_UP   &kp PG_DN    &kp HOME    &kp END    &kp INS
                     &trans     &trans      &trans                         &trans       &trans      &trans
       >;
     };
@@ -93,7 +82,7 @@
       label = "NUMBER";
       bindings = <
         &kp FSLH  &kp N7  &kp N8  &kp N9  &kp STAR   &none  &none      &none      &none     &none
-        &kp N0    &kp N4  &kp N5  &kp N6  &kp MINUS  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+        &kp N0    &kp N4  &kp N5  &kp N6  &kp MINUS  &none  &kp LEFT   &kp UP     &kp DOWN  &kp RIGHT
         &kp DOT   &kp N1  &kp N2  &kp N3  &kp PLUS   &none  &none      &none      &none     &none
                   &trans  &trans  &trans                    &trans     &trans     &trans
       >;
@@ -102,9 +91,9 @@
     mouse_layer {
       label = "MOUSE";
       bindings = <
-        &none      &none      &none       &none       &none      &none  &none        &none        &none      &none
-        &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none      &none  &none        &none        &none      &none
-        &none      &none      &none       &none       &none      &none  &none        &none        &none      &none
+        &none      &none      &none       &none       &none      &none  &none            &mmv LCLK      &mmv MCLK        &mmv RCLK
+        &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none      &none  &mmv MOVE_LEFT   &mmv MOVE_UP   &mmv MOVE_DOWN   &mmv MOVE_RIGHT
+        &none      &none      &none       &none       &none      &none  &mmv SCROLL_LEFT &mmv SCROLL_UP &mmv SCROLL_DOWN &mmv SCROLL_RIGHT
                     &trans     &trans      &trans                        &trans       &trans       &trans
       >;
     };
