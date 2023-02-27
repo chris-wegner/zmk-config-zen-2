@@ -11,8 +11,8 @@
 #define _MEDIA 5
 #define _ADJUST 6
 
-#define TAPPING_TERM 150
-#define QUICK_TAP 200
+#define TAPPING_TERM 250
+#define QUICK_TAP 350
 
 #define U_MOUSE_MOVE_MAX 1400 /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
