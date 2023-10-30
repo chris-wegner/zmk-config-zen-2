@@ -11,8 +11,8 @@
 #define _MEDIA 5
 #define _ADJUST 6
 
-#define TAPPING_TERM 250
-#define QUICK_TAP 350
+#define TAPPING_TERM 200
+#define QUICK_TAP 300
 
 #define U_MOUSE_MOVE_MAX 1400 /* <--- New max speed setting (default: 600) */
 #undef MOVE_UP
@@ -100,7 +100,7 @@
       label = "NAVI";
       bindings = <
 //     |________________|________________|________________|________________|________________|    |________________|________________|________________|________________|________________|
-        &none            &none            &none            &none            &none                 &kp K_REDO       &kp LC(Z)        &kp LC(X)       &kp LC(C)         &kp LC(V)
+        &none            &none            &none            &none            &none                 &kp K_REDO       &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)
 //     |________________|________________|________________|________________|________________|    |________________|________________|________________|________________|________________|
         &kp LGUI         &kp LALT         &kp LCTRL        &kp LSHFT        &none                 &caps_word       &kp LEFT         &kp UP           &kp DOWN         &kp RIGHT  
 //     |________________|________________|________________|________________|________________|    |________________|________________|________________|________________|________________|
